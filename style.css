@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+span,
+kbd {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-image: url(bg.jpg);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 97vh;
+}
+
+.blur {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.keys {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* justify-content: space-around; */
+    margin: 0 auto;
+}
+
+.pads {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.507);
+    z-index: 3;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 114, 122);
+    transition: 0.2s;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pads span {
+    margin-top: 5px;
+    font-size: 11px;
+    color: rgb(0, 238, 255);
+}
+
+.pads:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(0, 114, 122);
+}
+
+.padsss {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(0, 114, 122);
+}
+
+.copy {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(copy.jpg);
+    width: 100%;
+    height: 50px;
+    bottom: -1px;
+    text-shadow: 0 0 10px rgb(0, 114, 122);
+    z-index: 3;
+}
+
+.copy span {
+    text-align: center;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    animation-name: copy;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 25px;
+    width: 50%;
+    padding: 2px 5px;
+}
+
+@keyframes copy {
+    0% {
+        background-color: rgb(255, 0, 0);
+        color: #fff;
+    }
+
+
+
+    25% {
+        background-color: rgb(255, 230, 0);
+        color: #000;
+    }
+
+    50% {
+        background-color: rgb(0, 255, 42);
+        color: #000;
+    }
+
+    75% {
+        background-color: rgb(0, 243, 252);
+        color: #000;
+    }
+
+    100% {
+        background-color: rgb(98, 0, 255);
+        color: #fff;
+    }
+}
